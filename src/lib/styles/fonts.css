@@ -1,0 +1,33 @@
+/**
+ * Self-hosted fonts (static/fonts → served as /fonts/...)
+ * Trial paths below — update URLs when you switch to licensed production files.
+ *
+ * Tobias headings use the static Light master; the trial VF does not substitute
+ * for it cleanly at CSS weight 300. Jokker is a variable face (100–900).
+ */
+
+/** Display / headings: static Light trial (VF interpolation at 300 ≠ this master). */
+@font-face {
+	font-family: 'Tobias Light';
+	src: url('/fonts/DP_tobias_TRIAL/Tobias-TRIAL-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+/** Same family without “ Light” suffix for fallbacks when you ask for weights other than Light. */
+@font-face {
+	font-family: 'Tobias';
+	src: url('/fonts/DP_tobias_TRIAL/TobiasVF-TRIAL.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Jokker';
+	src: url('/fonts/DP_jokker_TRIAL/JokkerTRIALVF.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}

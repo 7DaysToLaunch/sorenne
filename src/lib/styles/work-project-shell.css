@@ -1,0 +1,30 @@
+/*
+ * Injected from routes/work/+layout.svelte only when a project defines `theme`.
+ * Precede with a :root { --site-theme-surface; --site-theme-fg } block (see layout).
+ */
+
+.site-shell {
+	background: var(--site-theme-surface);
+	color: var(--site-theme-fg);
+}
+
+.site-shell .footer {
+	background: var(--site-theme-surface);
+	color: var(--site-theme-fg);
+	border-top-color: color-mix(in oklab, var(--site-theme-fg) 18%, var(--site-theme-surface));
+}
+
+.site-shell .footer :focus-visible {
+	outline-color: color-mix(in oklab, var(--site-theme-fg) 65%, transparent);
+}
+
+.site-shell :focus-visible {
+	outline-color: color-mix(in oklab, var(--site-theme-fg) 72%, transparent);
+}
+
+.site-shell .tags__pill {
+	border-color: var(--site-theme-fg);
+	background-color: var(--site-theme-surface);
+	color: var(--site-theme-fg);
+	opacity: 1;
+}

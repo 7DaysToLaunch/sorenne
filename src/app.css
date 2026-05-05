@@ -1,0 +1,100 @@
+@import './lib/styles/fonts.css';
+@import './lib/styles/tokens.css';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+}
+
+html::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+	background: var(--color-scrollbar-track);
+}
+
+html::-webkit-scrollbar-thumb {
+	background: var(--color-scrollbar-thumb);
+	border-radius: var(--radius-full);
+	border: 2px solid var(--color-scrollbar-track);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background: var(--color-scrollbar-thumb-hover);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: var(--font-body);
+	font-size: var(--text-base);
+	font-weight: var(--font-weight-regular);
+	line-height: var(--leading-normal);
+	background: var(--color-bg);
+	color: var(--color-fg);
+}
+
+a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.12em;
+}
+
+a:hover {
+	text-decoration-thickness: 2px;
+}
+
+/*
+  Headings default to Tobias; bump specificity in components if you need exceptions.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+	font-family: var(--font-heading);
+	font-weight: var(--font-weight-light);
+	line-height: var(--leading-tight);
+	text-wrap: balance;
+	margin: 0;
+}
+
+.font-body {
+	font-family: var(--font-body);
+	line-height: var(--leading-normal);
+}
+
+.font-ui {
+	font-family: var(--font-body);
+	font-size: var(--text-sm);
+	line-height: var(--leading-snug);
+	font-weight: var(--font-weight-medium);
+	text-transform: uppercase;
+	letter-spacing: var(--tracking-caps);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+:focus-visible {
+	outline: var(--focus-ring-width) solid var(--color-focus-ring);
+	outline-offset: var(--focus-ring-offset);
+}
+
+/* Remove default outline when :focus-visible polyfill / heuristic not needed */
+:focus:not(:focus-visible) {
+	outline: none;
+}
