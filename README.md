@@ -121,7 +121,15 @@ The site also exposes:
 
 ## Deployment
 
-The project currently uses `@sveltejs/adapter-auto`, so deployment should work with supported SvelteKit hosts. Run a production build locally before deploying:
+The project uses `@sveltejs/adapter-vercel`, configured in `svelte.config.js`, so SvelteKit builds are targeted specifically for Vercel instead of relying on adapter auto-detection.
+
+On Vercel, the default project settings should work:
+
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output: handled by the SvelteKit Vercel adapter
+
+Run a production build locally before deploying:
 
 ```sh
 npm run build
